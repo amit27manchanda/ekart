@@ -15,6 +15,9 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
-body{
-	background-color: #FFFAFA;
+@import "font-awesome";
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1240px;
 }

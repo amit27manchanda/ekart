@@ -1,0 +1,61 @@
+<div class="col-md-3 blog-main box text-center" id="product_<%= product.id %>">
+ <div class="panel panel-info">
+ <div class="panel-heading">
+ <h3 class="panel-title">Name: <%= product.name %></h3>
+ <p1>Price: <%= product.price %></p1><br>
+ <p1>Stock: <%= product.stock %></p1>
+ </div>
+ <div class="panel-body">
+   <div class="product-image">
+        <img src="https://cdn.shopify.com/s/files/1/0938/8938/products/10231100205_1_1315x1800_300_CMYK_1024x1024.jpeg?v=1445623369">
+      </div>
+ <br>
+ <div class="btn-group" role="group" aria-label="...">
+ <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateproduct_<%= product.id %>">Edit</button>
+ <%= link_to 'Destroy', product, method: :delete, remote: true, class: "btn btn-danger" %>
+ </div>
+ </div>
+ </div>
+ </div>
+
+<%= form_for(product, :method => :put, remote: true) do |f| %>
+<div class="modal fade" id="updateproduct_<%= product.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+<h5 class="modal-title" id="myModalLabel">Edit</h5>
+</div>
+<div class="modal-body">
+ <div class="field">
+ <%= f.label :name %> <br>
+ <%= f.text_field :name, class: "form-control post_title" %>
+ </div>
+  <div class="field">
+ <%= f.label :description %> <br>
+ <%= f.text_area :description, class: "form-control post_content" %>
+</div>
+ <div class="field">
+ <%= f.label :price %> <br>
+ <%= f.text_field :price, class: "form-control post_title" %>
+ </div>
+<div class="field">
+ <%= f.label :category %> <br>
+ <%= f.text_field :category, class: "form-control post_title" %>
+ </div>
+ <div class="field">
+ <%= f.label :stock %> <br>
+ <%= f.text_field :stock, class: "form-control post_title" %>
+ </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="updatebutton_<%= product.id %>">Close</button>
+        <%= submit_tag "Update", class: "btn btn-primary" %>
+      </div>
+    </div>
+<% end %>
+</div>
+</div>
+

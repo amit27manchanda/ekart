@@ -1,8 +1,32 @@
-
-#notice{
-	padding:30px;
-}
-p1{
-	font-size:20px;
+p1, td{
+	font-size:13px;
 	text-transform: capitalize;
+}
+h2{
+	font-size: 50px;
+	color: #800080;
+	text-align: center;
+}
+.style{
+	text-align: right;
+}
+
+
+.product-image img {
+	width: 100%;
+	margin-top: 10px;
+}
+
+body {
+	margin: 0 auto;
+	width: 90%;
+	max-width: 1240px;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f6f6f6;
+}
+.panel-title{
+	text-transform: capitalize;
+}
+.panel-body{
+	color: #3BB2D6;
 }
