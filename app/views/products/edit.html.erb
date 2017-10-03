@@ -1,0 +1,8 @@
+<div class: "form-control">
+<h1><%= "Editing #{@product.name}" %></h1>
+
+<%= render 'form', product: @product %>
+</div>
+
+<%= link_to 'Show', @product %> |
+<%= link_to 'Back', products_path %>

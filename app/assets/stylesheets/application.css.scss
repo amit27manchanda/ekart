@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
-body{
-	background-color: #FFFAFA;
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+body {
+	margin: 0 auto;
+	width: 100%;
 }
