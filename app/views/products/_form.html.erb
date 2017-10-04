@@ -10,48 +10,48 @@
     </div>
   <% end %>
 <div class="modal fade" id="newproduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-<div class="modal-dialog">
-<div class="modal-content">
-
-<div class="modal-header">
-<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span></button>
-<h5 class="modal-title" id="myModalLabel">Post</h5>
-</div>
-
-<div class="modal-body">
- <div class="field">
- <%= f.label :name %> <br>
- <%= f.text_field :name, class: "form-control post_title" %>
- </div>
-  <div class="field">
- <%= f.label :description %> <br>
- <%= f.text_area :description, class: "form-control post_content" %>
-</div>
- <div class="field">
- <%= f.label :price %> <br>
- <%= f.text_field :price, class: "form-control post_title" %>
- </div>
-<div class="field">
- <%= f.label :category %> <br>
- <%= f.text_field :category, class: "form-control post_title" %>
- </div>
- <div class="field">
- <%= f.label :stock %> <br>
- <%= f.text_field :stock, class: "form-control post_title" %>
- <div class="field">
- <%= f.file_field :image %>
- </div>
- </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="newproductclose">Close</button>
-        <%= submit_tag "Create", class: "btn btn-primary" %>
-      </div>
-    </div>
-
+     <div class="modal-dialog">
+        <div class="modal-content"> 
+             <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;
+                    </span>
+              </button>
+                <h5 class="modal-title" id="myModalLabel">New Product</h5>
+             </div>
+             <div class="modal-body">
+                   <div class="field">
+                     <%= f.label :name %> <br>
+                     <%= f.text_field :name, class: "form-control" %>
+                   </div>
+                   <div class="field">
+                     <%= f.label :description %> <br>
+                     <%= f.text_area :description, class: "form-control" %>
+                   </div>
+                   <div class="field">
+                     <%= f.label :price %><br>
+                     <%= f.text_field :price, class: "form-control" %>
+                   </div>
+                   <div class="field">
+                     <%= f.label :category %> <br>
+                     <%= f.text_field :category, class: "form-control" %>
+                   </div>
+                   <div class="field">
+                     <%= f.label :stock %> <br>
+                     <%= f.text_field :stock, class: "form-control" %>
+                   </div>
+                   <div class="field">
+                     <%= f.file_field :image %>
+                   </div>
+             </div>
+             <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="newproductclose">Close
+                  </button>
+                  <%= submit_tag "Create", class: "btn btn-primary" %>
+              </div>
+       </div>
+   </div>
 <% end %>
- </div>
- </div>
+
 
   

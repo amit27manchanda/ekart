@@ -1,0 +1,62 @@
+<%= form_for @address do |f| %>
+  <% if @address.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(address.errors.count, "error") %> prohibited this address from being saved:</h2>
+
+      <ul>
+      <% address.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="modal fade" id="newaddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content"> 
+
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+<h5 class="modal-title" id="myModalLabel">Address</h5>
+</div>
+
+<div class="modal-body">
+
+  <div class="field">
+    <%= f.label :address1 %>
+    <%= f.text_field :address1 ,class: "form-control"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :adddress2 %>
+    <%= f.text_field :adddress2, id: :address_adddress2,class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.text_field :state, id: :address_state,class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city, id: :address_city,class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pincode %>
+    <%= f.number_field :pincode, id: :address_pincode,class: "form-control" %>
+  </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="newaddressclose">Close</button>
+        <%= submit_tag "Create", class: "btn btn-primary" %>
+      </div>
+    </div>
+
+<% end %>
+ </div>
+ </div>
+
+
+
+ 

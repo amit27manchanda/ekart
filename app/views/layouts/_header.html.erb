@@ -6,13 +6,15 @@
       <% end %>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
+      <li class="active"><%= link_to 'Home', root_path %></a></li>
       <li><a href="#">About Us</a></li>
       <li><a href="#">Contact Us</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
     <% if user_signed_in? %>
-    <li><%= image_tag current_user.image_url, class: "img-circle", width: "50", height: "50"%></li>
+    <li class="image-shape"><%= image_tag current_user.image_url, class: "img-circle", width: "50", height: "50" %></li>
+    <li><%= link_to current_user.name.capitalize, current_user %>
+    </li>
     <li><%= link_to destroy_user_session_path, method: :delete do %><span class="glyphicon glyphicon-user"></span> Sign Out<% end %></li>
     <% else %>
     <li><%= link_to new_user_registration_path do %><span class="glyphicon glyphicon-user"></span> Sign Up<% end %></li>
