@@ -1,0 +1,32 @@
+body {
+	margin: 0 auto;
+	width: 100%;
+}
+h1{
+	font-size: 50px;
+	color: #800080;
+	text-align: center;
+	padding: 60px 60px;
+	border: 6px solid gold;
+	border-radius: 10px;
+}
+h2{
+	font-size: 50px;
+	color: #800080;
+	text-align: center;
+	text-transform: capitalize;
+}
+h3{
+	font-size: 50px;
+	color: #800080;
+	text-transform: capitalize;
+}
+p1, td{
+	font-size:13px;
+	text-transform: capitalize;
+}
+.form {
+  padding-top: 30px;
+  max-width: 320px;
+  margin: 0 auto;
+}
