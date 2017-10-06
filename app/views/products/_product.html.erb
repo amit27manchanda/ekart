@@ -11,10 +11,15 @@
                   <%= image_tag product.image_url %>
                 </div>
                 <br>
+                <% if can? :update,product %>
                 <div class="btn-group" role="group" aria-label="...">
-                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateproduct_<%= product.id %>">Edit
+                      <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateproduct_<%= product.id %>">
+                      <%= link_to 'Edit' %>
                       </button>
+                      <% end %>
+                      <% if can? :destroy,product %>
                       <%= link_to 'Destroy', product, method: :delete, remote: true, class: "btn btn-danger" %>
+                      <% end %>
                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#showproduct_<%= product.id %>">Show
                       </button>
                </div>
@@ -87,7 +92,7 @@
                                  </div>
                                  <div class="field">
                                      <%= f.label :category %> <br>
-                                     <%= f.text_field :category, class: "form-control post_title" %>
+                                     <%= f.collection_select :category, Product::CATEGORY, :to_s, :humanize %>
                                  </div>
                                  <div class="field">
                                      <%= f.label :stock %> <br>

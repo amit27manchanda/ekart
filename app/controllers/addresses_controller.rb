@@ -15,8 +15,8 @@ class AddressesController < ApplicationController
 
   # GET /addresses/1/edit
   def edit
-  end
-
+  end 
+  
   # POST /addresses
   # POST /addresses.json
   def create

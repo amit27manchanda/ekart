@@ -8,9 +8,11 @@
 <div class="container">
 <div class="row">
 <div class="text-center">
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newproduct">
-  New Product
+<% if can? :create,@product %>
+<button type="button" data-toggle="modal" data-target="#newproduct">
+<%= link_to "New Product", new_product_path %>
 </button>
+<% end %>
 </div>
 <br>
 <br>

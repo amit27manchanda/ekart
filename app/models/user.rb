@@ -9,9 +9,10 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
   mount_uploader :image, ImageUploader
   has_many :addresses, dependent: :destroy
+  has_many :products, dependent: :destroy
 
   enum role: [:user, :admin]
-
+  
   def set_default_role
     self.role ||= :user
   end
